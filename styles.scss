@@ -1,0 +1,102 @@
+@use "sass:math";
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-50-2: hsla(260, 100%, 95%, 0.8);
+    --purple-300: hsl(264, 82%, 80%);
+    --purple-300-2: hsla(264, 82%, 80%, 0.6);
+    --purple-500: hsl(263, 55%, 52%);
+    --white: hsl(0, 0%, 100%);
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+    --footer-link: hsl(228, 45%, 44%);
+}
+
+@function rem($pixels, $context: 13) {
+    @return (math.div($pixels, $context))*1rem;
+}
+
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 13px;
+}
+
+footer {
+    font-size: rem(11);
+    text-align: center;
+
+    a {
+        color: var(--footer-link);
+    }
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    padding: 19.2% 9.33%;
+    color: var(--white);
+    background-color: var(--grey-200);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: rem(32);
+}
+
+section {
+    background-color: var(--purple-500);
+    padding: 10%;
+    border-radius: rem(8);
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: rem(12);
+        margin-bottom: rem(15);
+
+        img {
+            width: 12.3%;
+            height: 12.3%;
+            border-radius: 50%;
+            border: 2px solid var(--purple-300-2);
+        }
+    }
+
+}
+
+.name-information {
+    font-size: rem(12);
+    line-height: 1;
+    font-weight: 500;
+    color: var(--purple-50);
+}
+
+.verified {
+    margin-top: rem(5);
+    font-size: rem(10.2);
+    letter-spacing: rem(0.2);
+    color: var(--purple-50-2);
+}
+
+.testimonial {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: rem(1);
+    margin-bottom: rem(13.5);
+}
