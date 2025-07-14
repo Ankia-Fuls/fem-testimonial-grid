@@ -37,6 +37,8 @@ html {
 footer {
     font-size: rem(11);
     text-align: center;
+    color: var(--grey-500);
+    padding: 2rem;
 
     a {
         color: var(--footer-link);
@@ -45,6 +47,7 @@ footer {
 
 body {
     font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
     padding: 19.2% 9.33%;
     color: var(--white);
     background-color: var(--grey-200);
@@ -83,7 +86,6 @@ section {
 .name-information {
     font-size: rem(12);
     line-height: 1;
-    font-weight: 500;
     color: var(--purple-50);
 }
 
@@ -95,8 +97,88 @@ section {
 }
 
 .testimonial {
-    font-size: 1.4rem;
+    font-size: 1.39rem;
     font-weight: 600;
     letter-spacing: rem(1);
-    margin-bottom: rem(13.5);
+    margin-bottom: rem(15);
+    line-height: 1.25;
+    color: var(--white);
+}
+
+.quote {
+    font-size: rem(13.15);
+    color: var(--purple-50-2);
+    line-height: 1.3;
+}
+
+.jonathan {
+    background-color: var(--grey-500);
+
+    img {
+        border-color: var(--grey-200);
+    }
+}
+
+.jeanette {
+    background-color: var(--white);
+
+    img {
+        border-color: var(--white);
+    }
+
+    .name-information {
+        color: var(--grey-500);
+    }
+
+    .verified {
+        color: var(--grey-500);
+    }
+
+    .testimonial {
+        color: var(--grey-500);
+    }
+
+    .quote {
+        color: var(--grey-500);
+    }
+}
+
+.patrick {
+    background-color: var(--dark-blue);
+
+    img {
+        border-color: var(--purple-500);
+    }
+
+    .testimonial {
+        color: var(--grey-200);
+    }
+
+    .quote {
+        color: var(--grey-200);
+    }
+}
+
+.kira {
+    background-color: var(--white);
+
+    img {
+        border-color: var(--white);
+    }
+
+    .name-information {
+        color: var(--grey-500);
+    }
+
+    .verified {
+        color: var(--grey-400);
+    }
+
+    .testimonial {
+        color: var(--grey-500);
+    }
+
+    .quote {
+        color: var(--grey-400);
+    }
 }
