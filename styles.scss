@@ -1,5 +1,3 @@
-@use "sass:math";
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
@@ -18,10 +16,6 @@
     --footer-link: hsl(228, 45%, 44%);
 }
 
-@function rem($pixels, $context: 13) {
-    @return (math.div($pixels, $context))*1rem;
-}
-
 *,
 body,
 html {
@@ -31,11 +25,11 @@ html {
 }
 
 html {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 footer {
-    font-size: rem(11);
+    font-size: 0.6875rem;
     text-align: center;
     color: var(--grey-500);
     padding: 2rem;
@@ -57,56 +51,58 @@ main {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
-    gap: rem(32);
+    gap: 2rem;
 }
 
 section {
     background-color: var(--purple-500);
     padding: 10%;
-    border-radius: rem(8);
+    border-radius: 0.5rem;
+    max-height: 29.25rem;
+    overflow-y: scroll;
 
     header {
         display: flex;
         flex-direction: row;
         justify-content: start;
         align-items: center;
-        gap: rem(12);
-        margin-bottom: rem(15);
+        gap: 0.75rem;
+        margin-bottom: 0.9375rem;
 
         img {
             width: 12.3%;
             height: 12.3%;
             border-radius: 50%;
-            border: 2px solid var(--purple-300-2);
+            border: 0.125rem solid var(--purple-300-2);
         }
     }
 
 }
 
 .name-information {
-    font-size: rem(12);
+    font-size: 0.75rem;
     line-height: 1;
     color: var(--purple-50);
 }
 
 .verified {
-    margin-top: rem(5);
-    font-size: rem(10.2);
-    letter-spacing: rem(0.2);
+    margin-top: 0.3125rem;
+    font-size: 0.6375rem;
+    letter-spacing: 0.0125rem;
     color: var(--purple-50-2);
 }
 
 .testimonial {
-    font-size: 1.39rem;
+    font-size: 1.129375rem;
     font-weight: 600;
-    letter-spacing: rem(1);
-    margin-bottom: rem(15);
+    letter-spacing: 0.0625rem;
+    margin-bottom: 0.9375rem;
     line-height: 1.25;
     color: var(--white);
 }
 
 .quote {
-    font-size: rem(13.15);
+    font-size: 0.821875rem;
     color: var(--purple-50-2);
     line-height: 1.3;
 }
@@ -180,5 +176,11 @@ section {
 
     .quote {
         color: var(--grey-400);
+    }
+}
+
+@media only screen and (min-width: 23.4375rem) {
+    html {
+        font-size: 16px;
     }
 }
