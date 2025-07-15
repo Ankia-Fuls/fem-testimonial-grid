@@ -71,9 +71,9 @@ main {
 
 section {
     background-color: var(--purple-500);
-    padding: 10%;
+    padding: min(10%, 3.125rem);
     border-radius: 0.5rem;
-    max-height: 29.25rem;
+    max-height: 30rem;
     overflow-y: scroll;
     box-shadow: 2.54rem 3.462rem 1.923rem var(--grey-200);
 
@@ -86,8 +86,8 @@ section {
         margin-bottom: 0.9375rem;
 
         img {
-            width: 12.3%;
-            height: 12.3%;
+            width: min(12.3%, 2.8125rem);
+            height: min(12.3%, 2.8125rem);
             border-radius: 50%;
             border: 0.125rem solid var(--purple-300-2);
         }
@@ -202,6 +202,12 @@ section {
     }
 }
 
+@media only screen and (min-width: 37.5rem) {
+    .name-information {
+        font-size: 1rem;
+    }
+}
+
 @media only screen and (min-width: 73.125rem) {
 
     body {
@@ -217,6 +223,10 @@ section {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto auto;
         gap: 1.4375rem 1.9375rem;
+    }
+
+    .name-information {
+        font-size: 0.75rem;
     }
 
     section {
