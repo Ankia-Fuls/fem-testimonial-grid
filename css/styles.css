@@ -42,7 +42,7 @@ body {
   font-weight: 500;
   padding: 19.2% 9.33%;
   color: var(--white);
-  background-color: var(--grey-200);
+  background-color: var(--grey-100);
 }
 
 main {
@@ -60,6 +60,7 @@ section {
   border-radius: 0.5rem;
   max-height: 29.25rem;
   overflow-y: scroll;
+  box-shadow: 2.54rem 3.462rem 1.923rem var(--grey-200);
 }
 section header {
   display: flex;
@@ -183,22 +184,28 @@ section header img {
   section {
     max-height: 100%;
     padding: 1.8125rem;
+    overflow-y: hidden;
   }
   section header {
     gap: 0.8125rem;
-    margin-bottom: 0.9375rem;
+    margin-bottom: 1.2rem;
   }
   section header img {
     width: 1.875rem;
     height: 1.875rem;
     border-radius: 50%;
-    border: 0.0625rem solid var(--purple-300-2);
+    border: 0.125rem solid var(--purple-300-2);
   }
   .testimonial {
-    font-size: 1.145rem;
+    font-size: 1.12rem;
+    font-weight: 600;
     letter-spacing: 0.0625rem;
-    margin-bottom: 0.9375rem;
-    line-height: 1.25;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+    transform: scaleY(1.1);
+  }
+  .quote {
+    font-size: 0.82rem;
   }
   .daniel {
     grid-area: 1/1/2/3;
